@@ -1,0 +1,67 @@
+$grid-breakpoints: (
+        xxs: 400px,
+        xs: 480px,
+        xsm: 560px,
+        sm: 780px,
+        smd: 960px,
+        md: 1279px,
+        xl: 1480px,
+) !default;
+
+@mixin media-breakpoint-down($breakpoint) {
+  @if map-has_key($grid-breakpoints, $breakpoint) {
+    @media screen and (max-width: map_get($grid-breakpoints, $breakpoint ) - 1) {
+      @content;
+    }
+  } @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Please make sure it is defined in `$breakpoints` map.";
+  }
+}
+
+@mixin skeleton($self) {
+  #{$self}.skeleton {
+    & div::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      transform: translateX(-100%);
+      background-image: linear-gradient(
+                      90deg,
+                      rgba(#fff, 0) 0,
+                      rgba(#fff, 0.2) 20%,
+                      rgba(#fff, 0.5) 60%,
+                      rgba(#fff, 0)
+      );
+      animation: shimmer 1s infinite ease-in-out;
+      content: '';
+    }
+
+    @keyframes shimmer {
+      100% {
+        transform: translateX(100%);
+      }
+    }
+  }
+}
+
+@mixin info($size) {
+  background-color: $orange;
+  width: $size;
+  height: $size;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  color: #fff;
+  font-size: 14px;
+}
+
+@mixin card($padding:15px) {
+  background-color: #fff;
+  border-radius: $border-radius;
+  box-shadow: $shadow;
+  padding: $padding;
+}

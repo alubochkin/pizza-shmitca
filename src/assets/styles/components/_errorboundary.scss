@@ -1,0 +1,23 @@
+.errors-block {
+  & > h1 {
+    font-size: 28px;
+    color: #ff5b73;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    background: #1a1b21;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+  }
+
+  & > p {
+    font-size: 13px;
+    line-height: 20px;
+    color: #fff;
+  }
+}

@@ -1,0 +1,215 @@
+@import '../variables';
+
+.content {
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 20px;
+
+    @include media-breakpoint-down(xl) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    @include media-breakpoint-down(md) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include media-breakpoint-down(sm) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+    @include media-breakpoint-down(xs) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  &__title {
+    margin: 35px 0;
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__button-close, &__button-open {
+      display: none;
+    }
+
+
+    &__wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      position: relative;
+    }
+
+    //@include media-breakpoint-down(md) {
+    //  position: fixed;
+    //  height: 100%;
+    //  top: 0;
+    //  background: #ffffffbd;
+    //  backdrop-filter: blur(8px);
+    //  display: flex;
+    //  min-width: 300px;
+    //  max-width: 500px;
+    //  width: 100%;
+    //  align-items: flex-start;
+    //  justify-content: flex-start;
+    //  left: -100%;
+    //  z-index: 1;
+    //  padding: 30px 15px 15px;
+    //  gap: 30px;
+    //  box-shadow: 15px 0px 15px rgb(0 0 0 / 8%);
+    //  transition: ease-in-out .3s;
+    //
+    //  &.open {
+    //    left: 0;
+    //  }
+    //
+    //  &__button-close {
+    //    position: absolute;
+    //    right: 15px;
+    //    top: 5px;
+    //    background: #fe5f1e;
+    //    color: #fff;
+    //    border-radius: 30px;
+    //    width: 30px;
+    //    height: 30px;
+    //    display: flex;
+    //    align-items: center;
+    //    justify-content: center;
+    //    cursor: pointer;
+    //  }
+    //  &__button-open {
+    //    display: block;
+    //  }
+    //}
+  }
+}
+
+.pizza-block {
+  text-align: center;
+  overflow: hidden;
+  transition: $duration box-shadow;
+  @include card(15px);
+
+  @include media-breakpoint-down(sm) {
+    padding: 10px;
+  }
+  @include media-breakpoint-down(xs) {
+    width: 280px;
+    justify-self: center;
+  }
+
+  $self: &;
+
+  &__image {
+    width: 260px;
+    height: 260px;
+    @include media-breakpoint-down(md) {
+      width: 200px;
+      height: 200px;
+    }
+    @include media-breakpoint-down(xsm) {
+      width: 160px;
+      height: 160px;
+    }
+  }
+
+  &__title {
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: normal;
+    margin-bottom: 20px;
+
+    @include media-breakpoint-down(xsm) {
+      font-size: 16px;
+    }
+  }
+
+  &__selector {
+    display: flex;
+    border-radius: 10px;
+    flex-direction: column;
+    padding: 6px;
+
+    ul {
+      display: flex;
+      flex: 1;
+
+      &:first-of-type {
+        margin-bottom: 15px;
+      }
+
+      li {
+        padding: 8px;
+        flex: 1;
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 14px;
+        @include noselect();
+
+        @include media-breakpoint-down(xsm) {
+          font-size: 12px;
+        }
+
+        &.active {
+          background: #9f9f9f24;
+          box-shadow: 0px 2px 4px rgb(0 0 0 / 4%);
+          border-radius: 5px;
+          cursor: auto;
+          font-weight: 800;
+          color: $orange;
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+
+  &__price {
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 27px;
+    letter-spacing: 0.015em;
+  }
+
+  &.skeleton {
+    height: 500px;
+    position: relative;
+    border-color: #f4f4f4;
+
+    @include skeleton('&');
+
+    #{$self}__image {
+      background-color: #f4f4f4;
+      border-radius: 50%;
+      position: relative;
+      margin: auto auto 20px;
+    }
+
+    #{$self}__title {
+      height: 27px;
+      background-color: #f4f4f4;
+      position: relative;
+    }
+
+    #{$self}__bottom {
+      height: 45px;
+      background-color: #f4f4f4;
+      position: relative;
+    }
+
+    #{$self}__selector {
+      height: 97px;
+      background-color: #f4f4f4;
+    }
+  }
+}

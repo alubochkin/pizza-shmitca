@@ -1,0 +1,107 @@
+@import '../variables';
+
+.header {
+  border-bottom: 1px solid $gray-line;
+  margin-bottom: 30px;
+  position: relative;
+
+  &__delimiter {
+    width: 1px;
+    height: 25px;
+    background-color: rgba(255, 255, 255, 0.25);
+    margin: 0 8px;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include media-breakpoint-down(xsm) {
+      flex-direction: column;
+      justify-content: left;
+    }
+  }
+
+  $header: &;
+
+  &__logo {
+    display: flex;
+
+    &-img {
+      margin-right: 15px;
+      background-image: url('../../img/pizza-logo.svg');
+      background-size: cover;
+      width: 40px;
+      height: 40px;
+    }
+
+    h1 {
+      color: #181818;
+      font-size: 24px;
+      letter-spacing: normal;
+      text-transform: uppercase;
+      font-weight: 800;
+    }
+
+    p {
+      color: #7b7b7b;
+      margin-left: -50px;
+      position: absolute;
+      margin-top: 10px;
+    }
+  }
+
+  &__action-block {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex: 0 1 200px;
+
+    @include media-breakpoint-down(xsm) {
+      flex: initial;
+      margin-top: 50px;
+      justify-content: flex-end;
+      gap: 20px
+    }
+
+    #{$header}-modal {
+      visibility: hidden;
+      position: absolute;
+    }
+
+    #{$header}-info {
+      @include info(30px);
+      width: max-content;
+      padding: 0 10px;
+      min-width: 90px;
+      cursor: pointer;
+
+      .header__cart-total-count {
+        background-image: url(../../img/cart.svg);
+        width: 35px;
+        background-repeat: no-repeat;
+        text-align: right;
+        background-size: 26px;
+        background-position: left center;
+      }
+    }
+
+    #{$header}-user {
+      cursor: pointer;
+      display: flex;
+      gap: 5px;
+      align-items: center;
+
+      &-icon {
+        @include info(30px);
+        background-image: url(../../img/user.svg);
+        background-size: 26px;
+        background-repeat: no-repeat;
+        background-position: center;
+
+      }
+    }
+
+  }
+}
