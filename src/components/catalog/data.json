@@ -59,7 +59,7 @@
       40
     ],
     "price": 275,
-    "category": 2,
+    "category": 3,
     "rating": 2
   },
   {
@@ -159,7 +159,58 @@
       40
     ],
     "price": 285,
-    "category": 1,
+    "category": 2,
+    "rating": 7
+  },
+  {
+    "id": 11,
+    "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/30367198-f3bd-44ed-9314-6f717960da07.jpg",
+    "title": "Овощи, грибы и много сыра  🌱",
+    "types": [
+      0,
+      1
+    ],
+    "sizes": [
+      26,
+      30,
+      40
+    ],
+    "price": 385,
+    "category": 2,
+    "rating": 5
+  },
+  {
+    "id": 12,
+    "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/30367198-f3bd-44ed-9314-6f717960da07.jpg",
+    "title": "Курица и ананас",
+    "types": [
+      0,
+      1
+    ],
+    "sizes": [
+      26,
+      30,
+      40
+    ],
+    "price": 340,
+    "category": 3,
+    "rating": 8
+  },
+  {
+    "id": 13,
+    "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/30367198-f3bd-44ed-9314-6f717960da07.jpg",
+    "title": "Мексиканская острая",
+    "types": [
+      0,
+      1
+    ],
+    "sizes": [
+      26,
+      30,
+      40
+    ],
+    "price": 415,
+    "category": 4,
     "rating": 7
   }
 ]

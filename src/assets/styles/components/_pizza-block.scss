@@ -93,6 +93,9 @@
   text-align: center;
   overflow: hidden;
   transition: $duration box-shadow;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   @include card(15px);
 
   @include media-breakpoint-down(sm) {
@@ -106,15 +109,15 @@
   $self: &;
 
   &__image {
-    width: 260px;
-    height: 260px;
-    @include media-breakpoint-down(md) {
-      width: 200px;
-      height: 200px;
+    width: 100%;
+    height: auto;
+    margin-left: 3%;
+
+    @include media-breakpoint-down(sm) {
+      margin-left: 5%;
     }
     @include media-breakpoint-down(xsm) {
-      width: 160px;
-      height: 160px;
+      margin-left: 3%;
     }
   }
 
