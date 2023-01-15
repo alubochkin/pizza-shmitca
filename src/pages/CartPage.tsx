@@ -4,7 +4,6 @@ import CartItem from '../components/cart/CartItem';
 
 function Cart() {
   const { items, totalPrice, count } = useAppSelector((state) => state.cart);
-  console.log(items);
   return (
     <div className="content">
       <div className="cart">
