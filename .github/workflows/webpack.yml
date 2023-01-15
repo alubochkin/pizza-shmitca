@@ -1,4 +1,8 @@
-name: Run deploy project
+# Run build scrippt webpack
+#
+#
+
+name: Run-build-webpack
 
 on:
   push:
