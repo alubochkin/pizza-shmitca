@@ -1,4 +1,4 @@
-export const getParams = (params: string) => {
+export const getParams = (params: string): Record<string, any> => {
   const str = params[0] === '?' ? params.slice(1) : params;
   const sliceStr = str.split('&');
   const res = {} as Record<string, string>;
