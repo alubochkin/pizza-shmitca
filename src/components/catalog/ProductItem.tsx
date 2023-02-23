@@ -65,11 +65,11 @@ export default function ProductItem(props: IProductItem) {
       </div>
       <div className="pizza-block__bottom">
         <div className="pizza-block__price">{price}</div>
-        <div className="button button--outline button--add">
-          <span className="button__icon icon-plus"></span>
-          <span className="button__text" onClick={addCartHandler}>
-            Добавить
-          </span>
+        <div
+          onClick={addCartHandler}
+          className="button button--outline button--add"
+        >
+          <span className="button__icon icon-add"></span>
           <i>{count}</i>
         </div>
       </div>
