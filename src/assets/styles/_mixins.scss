@@ -47,7 +47,21 @@ $grid-breakpoints: (
   }
 }
 
-@mixin info($size) {
+@mixin info($size, $radius, $color, $bg) {
+  background-color: $bg;
+  width: $size;
+  height: $size;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: $radius;
+  color: $color;
+  font-size: 14px;
+  font-weight: 400;
+  box-shadow: 0 0 30px rgba(141, 141, 141, 0.12);
+}
+
+@mixin info-grey($size) {
   background-color: $orange;
   width: $size;
   height: $size;

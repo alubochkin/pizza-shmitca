@@ -70,14 +70,14 @@
     }
 
     #{$header}-info {
-      @include info(30px);
+      @include info(30px, 30px, $black, $orange-light);
       width: max-content;
       padding: 0 10px;
       min-width: 90px;
       cursor: pointer;
 
       .header__cart-total-count {
-        background-image: url(../../img/cart.svg);
+        background-image: url(../../img/dark-cart.svg);
         width: 35px;
         background-repeat: no-repeat;
         text-align: right;
@@ -93,8 +93,8 @@
       align-items: center;
 
       &-icon {
-        @include info(30px);
-        background-image: url(../../img/user.svg);
+        @include info(30px, 30px, $black, $orange-light);
+        background-image: url(../../img/dark-user.svg);
         background-size: 26px;
         background-repeat: no-repeat;
         background-position: center;

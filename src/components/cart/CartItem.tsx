@@ -4,7 +4,7 @@ import { useAppDispatch } from '../../hooks/redux';
 import { quantityItemCart } from '../../redux/reducers/cart/actionCart';
 
 export default function CartItem(props: IProductItem) {
-  const { imageUrl, title, types, sizes, price, id, quantity } = props;
+  const { imageUrl, title, price, id, quantity } = props;
   const itemCartRef = useRef<HTMLDivElement>(null);
   const dispatch = useAppDispatch();
   const quantityHandler = (type: 'dec' | 'inc') => {

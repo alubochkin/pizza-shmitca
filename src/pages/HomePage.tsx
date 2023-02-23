@@ -50,6 +50,7 @@ export default function HomePage() {
     params += `&page=${page + 1}&limit=8`;
 
     dispatch(getProduct(params));
+    // dispatch(getCart2());
 
     navigate('?' + params);
     window.scrollTo(0, 0);

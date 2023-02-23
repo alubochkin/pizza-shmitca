@@ -7,16 +7,16 @@
     border-radius: 20px;
     width: 24px;
     height: 24px;
-    border: 1px solid;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    color: $black;
+    background-color: $orange-light;
 
     &.active {
       background-color: $orange;
-      border-color: $orange;
-      color: #fff;
+      color: white;
     }
   }
 }
