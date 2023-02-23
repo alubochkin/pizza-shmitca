@@ -14,3 +14,14 @@ export const getProduct = createAsyncThunk<any, string>(
     }
   }
 );
+
+// export const getCart2 = () => {
+//   return async (dispatch: AppDispatch) => {
+//     const response = await http.get('/products');
+//     dispatch(
+//       productsSlice.actions.fetchGetCart({
+//         data: response,
+//       })
+//     );
+//   };
+// };

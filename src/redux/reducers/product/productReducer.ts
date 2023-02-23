@@ -12,7 +12,11 @@ const initialState: IProductsState = {
 export const productsSlice = createSlice({
   name: 'products',
   initialState,
-  reducers: {},
+  reducers: {
+    // fetchGetCart: (state, payload) => {
+    //   console.log(payload);
+    // },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(getProduct.fulfilled, (state, action) => {
