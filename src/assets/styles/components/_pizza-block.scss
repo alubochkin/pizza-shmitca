@@ -196,6 +196,9 @@
       border-radius: 50%;
       position: relative;
       margin: auto auto 20px;
+      max-height: 240px;
+      max-width: 240px;
+      height: 100%;
     }
 
     #{$self}__title {

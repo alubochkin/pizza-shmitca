@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { ICartState } from '../../reduxTypes';
 import { addCart, getCart } from './actionCart';
-import { IProductItem } from '../../../components/catalog/CatalogTypes';
+import { totalCalculate } from './helpersSlice';
 
 const initialState: ICartState = {
   items: [],

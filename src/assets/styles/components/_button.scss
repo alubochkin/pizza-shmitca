@@ -2,14 +2,14 @@
 
 .button {
   display: inline-block;
-  background-color: $orange;
+  background-color: $black;
   border-radius: 30px;
   padding: 10px 15px;
   min-width: 100px;
   text-align: center;
   cursor: pointer;
   transition: background-color $duration ease-in-out,
-    border-color $duration ease-in-out;
+  border-color $duration ease-in-out;
   border: 1px solid transparent;
   @include noselect();
 
@@ -26,11 +26,11 @@
   }
 
   &:hover {
-    background-color: darken($orange, 8%);
+    background-color: darken($black, 8%);
   }
 
   &:active {
-    background-color: darken($orange, 12%);
+    background-color: darken($black, 12%);
     transform: translateY(1px);
   }
 
@@ -56,11 +56,11 @@
 
   &--outline {
     background-color: #fff;
-    border-color: $orange;
+    border-color: $black;
 
     &,
     span {
-      color: $orange;
+      color: $black;
     }
 
     svg {
@@ -70,7 +70,7 @@
     }
 
     &:hover {
-      background-color: $orange;
+      background-color: $black;
 
       &,
       span {
@@ -102,7 +102,7 @@
     align-items: center;
 
     span.button__icon {
-      background-image: url('../../img/plus.svg');
+      background-image: url('../../img/dark-plus.svg');
       background-repeat: no-repeat;
       height: 12px;
       width: 12px;
@@ -118,14 +118,18 @@
     &:hover {
       i {
         background-color: #fff;
-        color: $orange;
+        color: $black;
+      }
+
+      span.button__icon {
+        background-image: url('../../img/plus.svg');
       }
     }
 
     i {
       display: inline-block;
       border-radius: 30px;
-      background-color: $orange;
+      background-color: $black;
       color: #fff;
       font-weight: 600;
       width: 22px;
