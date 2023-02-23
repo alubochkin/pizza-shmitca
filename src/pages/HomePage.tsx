@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import classNames from 'classnames';
 import Categories from '../components/catalog/Categories';
@@ -53,18 +53,14 @@ export default function HomePage() {
     // dispatch(getCart2());
 
     navigate('?' + params);
-    window.scrollTo(0, 0);
+    document.body.scrollTop = 0;
   }, [catValue, sortValue, page]);
 
-  const paramPage = useMemo(
-    () => Number(paramsLocation.page) - 1,
-    [paramsLocation.page]
-  );
+  const paramPage = Number(paramsLocation.page) - 1;
 
   useEffect(() => {
     if (page !== paramPage && page) {
       setPage(paramPage);
-      window.scrollTo(0, 0);
     }
   }, [paramPage]);
 
